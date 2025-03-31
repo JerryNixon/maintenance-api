@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+9HSBCwwb68=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\jnixon\\source\\repos\\maintenance-api\\DbMaintenance\\DbMaintenance.sqlproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jnixon\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\jnixon\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net20\\1.0.3\\microsoft.netframework.referenceassemblies.net20.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

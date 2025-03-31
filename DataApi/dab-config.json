@@ -1,0 +1,234 @@
+{
+  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v1.3.19/dab.draft.schema.json",
+  "data-source": {
+    "database-type": "mssql",
+    "connection-string": "@env('my-connection-string')",
+    "options": {
+      "set-session-context": false
+    }
+  },
+  "runtime": {
+    "rest": {
+      "enabled": true,
+      "path": "/api",
+      "request-body-strict": true
+    },
+    "graphql": {
+      "enabled": true,
+      "path": "/graphql",
+      "allow-introspection": true
+    },
+    "host": {
+      "cors": {
+        "origins": [],
+        "allow-credentials": false
+      },
+      "authentication": {
+        "provider": "StaticWebApps"
+      },
+      "mode": "development"
+    }
+  },
+  "entities": {
+    "usp_GetRootBlockers": {
+      "source": {
+        "object": "maintenance.usp_GetRootBlockers",
+        "type": "stored-procedure"
+      },
+      "graphql": {
+        "enabled": true,
+        "operation": "mutation",
+        "type": {
+          "singular": "usp_GetRootBlockers",
+          "plural": "usp_GetRootBlockers"
+        }
+      },
+      "rest": {
+        "enabled": true,
+        "path": "/usp_GetRootBlockers",
+        "methods": [
+          "get",
+          "post"
+        ]
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ],
+      "mappings": {
+        "session_id": "session_id",
+        "blocking_session_id": "blocking_session_id",
+        "login_name": "login_name",
+        "program_name": "program_name",
+        "login_time": "login_time"
+      }
+    },
+    "usp_GetQueryPlan": {
+      "source": {
+        "object": "maintenance.usp_GetQueryPlan",
+        "type": "stored-procedure",
+        "parameters": {
+          "QueryText": "string"
+        }
+      },
+      "graphql": {
+        "enabled": true,
+        "operation": "mutation",
+        "type": {
+          "singular": "usp_GetQueryPlan",
+          "plural": "usp_GetQueryPlans"
+        }
+      },
+      "rest": {
+        "enabled": true,
+        "path": "/usp_GetQueryPlan",
+        "methods": [
+          "post"
+        ]
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ],
+      "mappings": {
+        "query_plan_xml": "query_plan_xml",
+        "query_text": "query_text",
+        "estimated_cost": "estimated_cost"
+      }
+    },
+    "usp_GetOpenTransactions": {
+      "source": {
+        "object": "maintenance.usp_GetOpenTransactions",
+        "type": "stored-procedure",
+        "parameters": {
+          "MinDurationSeconds": "number",
+          "SessionId": "number"
+        }
+      },
+      "graphql": {
+        "enabled": true,
+        "operation": "mutation",
+        "type": {
+          "singular": "usp_GetOpenTransactions",
+          "plural": "usp_GetOpenTransactions"
+        }
+      },
+      "rest": {
+        "enabled": true,
+        "path": "/usp_GetOpenTransactions",
+        "methods": [
+          "post"
+        ]
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ],
+      "mappings": {
+        "session_id": "session_id",
+        "transaction_name": "transaction_name",
+        "transaction_begin_time": "transaction_begin_time",
+        "transaction_state": "transaction_state",
+        "transaction_log_space_used_mb": "transaction_log_space_used_mb"
+      }
+    },
+    "usp_GetHistoricalSystemEvents": {
+      "source": {
+        "object": "maintenance.usp_GetHistoricalSystemEvents",
+        "type": "stored-procedure",
+        "parameters": {
+          "StartTime": "string",
+          "EndTime": "string"
+        }
+      },
+      "graphql": {
+        "enabled": true,
+        "operation": "mutation",
+        "type": {
+          "singular": "usp_GetHistoricalSystemEvents",
+          "plural": "usp_GetHistoricalSystemEvents"
+        }
+      },
+      "rest": {
+        "enabled": true,
+        "path": "/usp_GetHistoricalSystemEvents",
+        "methods": [
+          "post"
+        ]
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ],
+      "mappings": {
+        "event_time": "event_time",
+        "event_type": "event_type",
+        "event_description": "event_description"
+      }
+    },
+    "usp_GetHAFailoverReadiness": {
+      "source": {
+        "object": "maintenance.usp_GetHAFailoverReadiness",
+        "type": "stored-procedure",
+        "parameters": {
+          "ReplicaName": "string"
+        }
+      },
+      "graphql": {
+        "enabled": true,
+        "operation": "mutation",
+        "type": {
+          "singular": "usp_GetHAFailoverReadiness",
+          "plural": "usp_GetHAFailoverReadinesses"
+        }
+      },
+      "rest": {
+        "enabled": true,
+        "path": "/usp_GetHAFailoverReadiness",
+        "methods": [
+          "post"
+        ]
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ],
+      "mappings": {
+        "replica_name": "replica_name",
+        "is_synchronized": "is_synchronized",
+        "is_primary": "is_primary",
+        "failover_readiness_state": "failover_readiness_state"
+      }
+    }
+  }
+}

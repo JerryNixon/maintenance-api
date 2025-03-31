@@ -1,0 +1,12 @@
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\bin\Debug\DbMaintenance.dacpac
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\bin\Debug\DbMaintenance.deps.json
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\bin\Debug\DbMaintenance.dll
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\bin\Debug\DbMaintenance.pdb
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\DbMaintenance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\DbMaintenance.sourcelink.json
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\Model.xml
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\refactor.xml
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\postdeploy.sql
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\predeploy.sql
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\DbMaintenance.dll
+C:\Users\jnixon\source\repos\maintenance-api\DbMaintenance\obj\Debug\DbMaintenance.pdb
