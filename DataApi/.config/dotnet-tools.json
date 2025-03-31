@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "microsoft.dataapibuilder": {
+      "version": "1.3.19",
+      "commands": [
+        "dab"
+      ],
+      "rollForward": true
+    }
+  }
+}
