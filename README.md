@@ -39,23 +39,23 @@ Example `my-connection-string` format:
 ```bash
 dab init --database-type mssql --connection-string "@env('my-connection-string')" --host-mode development -c "dab-config.json"
 
-dab add usp_GetRootBlockers -c "dab-config.json" --source maintenance.usp_GetRootBlockers --source.type "stored-procedure"  --permissions "anonymous:*" --rest "usp_GetRootBlockers" --rest.methods "GET, POST"
+dab add usp_GetRootBlockers -c "dab-config.json" --source "maintenance.usp_GetRootBlockers" --source.type "stored-procedure"  --permissions "anonymous:*" --rest "usp_GetRootBlockers" --rest.methods "GET, POST"
 
 dab update usp_GetRootBlockers -c "dab-config.json"
 
-dab add usp_GetQueryPlan -c "dab-config.json" --source maintenance.usp_GetQueryPlan --source.type "stored-procedure" --source.params "QueryText:string" --permissions "anonymous:*" --rest "usp_GetQueryPlan" --rest.methods "POST"
+dab add usp_GetQueryPlan -c "dab-config.json" --source "maintenance.usp_GetQueryPlan" --source.type "stored-procedure" --source.params "QueryText:string" --permissions "anonymous:*" --rest "usp_GetQueryPlan" --rest.methods "POST"
 
 dab update usp_GetQueryPlan -c "dab-config.json" 
 
-dab add usp_GetOpenTransactions -c "dab-config.json" --source maintenance.usp_GetOpenTransactions --source.type "stored-procedure" --source.params "MinDurationSeconds:number,SessionId:number" --permissions "anonymous:*" --rest "usp_GetOpenTransactions" --rest.methods "POST"
+dab add usp_GetOpenTransactions -c "dab-config.json" --source "maintenance.usp_GetOpenTransactions" --source.type "stored-procedure" --source.params "MinDurationSeconds:number,SessionId:number" --permissions "anonymous:*" --rest "usp_GetOpenTransactions" --rest.methods "POST"
 
 dab update usp_GetOpenTransactions -c "dab-config.json" 
 
-dab add usp_GetHistoricalSystemEvents -c "dab-config.json" --source maintenance.usp_GetHistoricalSystemEvents --source.type "stored-procedure" --source.params "StartTime:string,EndTime:string" --permissions "anonymous:*" --rest "usp_GetHistoricalSystemEvents" --rest.methods "POST"
+dab add usp_GetHistoricalSystemEvents -c "dab-config.json" --source "maintenance.usp_GetHistoricalSystemEvents" --source.type "stored-procedure" --source.params "StartTime:string,EndTime:string" --permissions "anonymous:*" --rest "usp_GetHistoricalSystemEvents" --rest.methods "POST"
 
 dab update usp_GetHistoricalSystemEvents -c "dab-config.json"
 
-dab add usp_GetHAFailoverReadiness -c "dab-config.json" --source maintenance.usp_GetHAFailoverReadiness --source.type "stored-procedure" --source.params "ReplicaName:string" --permissions "anonymous:*" --rest "usp_GetHAFailoverReadiness" --rest.methods "POST"
+dab add usp_GetHAFailoverReadiness -c "dab-config.json" --source "maintenance.usp_GetHAFailoverReadiness" --source.type "stored-procedure" --source.params "ReplicaName:string" --permissions "anonymous:*" --rest "usp_GetHAFailoverReadiness" --rest.methods "POST"
 
 dab update usp_GetHAFailoverReadiness -c "dab-config.json" 
 
