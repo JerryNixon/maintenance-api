@@ -36,7 +36,7 @@ Example `my-connection-string` format:
 
 ## Get started with the CLI
 
-```text
+```bash
 dab init --database-type mssql --connection-string "@env('my-connection-string')" --host-mode development -c "dab-config.json"
 
 dab add usp_GetRootBlockers -c "dab-config.json" --source maintenance.usp_GetRootBlockers --source.type "stored-procedure"  --permissions "anonymous:*" --rest "usp_GetRootBlockers" --rest.methods "GET, POST"
